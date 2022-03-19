@@ -8,7 +8,7 @@
 ######################################################################
 p6df::modules::p6kubernetes::deps() {
   ModuleDeps=(
-    p6m7g8/p6common
+    p6m7g8-dotfiles/p6common
   )
 }
 
@@ -66,7 +66,7 @@ p6_kubernetes_deployment_of_image() {
   local image="$1"
 
   local str
-  str=$(p6_template_process "$P6_DFZ_SRC_P6M7G8_DIR/p6kubernetes/share/deployment.yaml" "IMAGE=$image")
+  str=$(p6_template_process "$P6_DFZ_SRC_P6M7G8_DOTFILES_DIR/p6kubernetes/share/deployment.yaml" "IMAGE=$image")
 
   local dir=$(p6_transient_create "p6_template")
   local outfile="$dir/outfile"
