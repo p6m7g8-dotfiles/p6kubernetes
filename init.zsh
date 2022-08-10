@@ -1,4 +1,4 @@
-
+# shellcheck shell=bash
 ######################################################################
 #<
 #
@@ -29,6 +29,7 @@ p6df::modules::p6kubernetes::init() { }
 #  Returns:
 #	str - str
 #
+#  Environment:	 KUBECONFIG P6_KUBE_CFG P6_KUBE_NS
 #>
 ######################################################################
 p6_kubernetes_prompt_info() {
@@ -60,6 +61,7 @@ p6_kubernetes_prompt_info() {
 #  Args:
 #	image -
 #
+#  Environment:	 P6_DFZ_SRC_P6M7G8_DOTFILES_DIR
 #>
 ######################################################################
 p6_kubernetes_deployment_of_image() {
