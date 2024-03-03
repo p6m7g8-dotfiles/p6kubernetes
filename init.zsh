@@ -15,15 +15,6 @@ p6df::modules::p6kubernetes::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::p6kubernetes::init()
-#
-#>
-######################################################################
-p6df::modules::p6kubernetes::init() { }
-
-######################################################################
-#<
-#
 # Function: p6_kubernetes_prompt_info()
 #
 #  Returns:
@@ -34,23 +25,23 @@ p6df::modules::p6kubernetes::init() { }
 ######################################################################
 p6_kubernetes_prompt_info() {
 
-    local str
+  local str
 
-    if ! p6_string_blank "$KUBECONFIG"; then
-      str="kube:     "
-    fi
-    if ! p6_string_blank "$P6_KUBE_CFG"; then
-      str="${str}ctx=[$P6_KUBE_CFG]"
-    fi
-    if ! p6_string_blank "$P6_KUBE_NS"; then
-      str="${str} ns=[$P6_KUBE_NS]"
-    fi
+  if ! p6_string_blank "$KUBECONFIG"; then
+    str="kube:     "
+  fi
+  if ! p6_string_blank "$P6_KUBE_CFG"; then
+    str="${str}ctx=[$P6_KUBE_CFG]"
+  fi
+  if ! p6_string_blank "$P6_KUBE_NS"; then
+    str="${str} ns=[$P6_KUBE_NS]"
+  fi
 
-    if p6_string_blank "$str"; then
-      p6_return_void
-    else
-      p6_return_str "$str"
-    fi
+  if p6_string_blank "$str"; then
+    p6_return_void
+  else
+    p6_return_str "$str"
+  fi
 }
 
 ######################################################################
@@ -75,4 +66,6 @@ p6_kubernetes_deployment_of_image() {
   p6_file_write "$outfile" "$str"
   p6_run_code "kubectl apply -f $outfile"
   p6_transient_delete "$dir"
+
+  p6_return_void
 }
