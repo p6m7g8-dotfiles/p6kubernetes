@@ -33,7 +33,7 @@ p6_kubernetes_pod_find() {
 p6_kubernetes_pod_delete() {
   local pod_name="$1"
 
-  kubectl delete pod "$pod_name"
+  p6_run_code kubectl delete pod "$pod_name"
 
   p6_return_void
 }
