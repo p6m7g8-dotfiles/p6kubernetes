@@ -44,12 +44,37 @@
 
 #### p6kubernetes/init.zsh:
 
-- p6_kubernetes_deployment_of_image(image)
-- p6_kubernetes_prompt_info()
 - p6df::modules::p6kubernetes::deps()
+- p6df::modules::p6kubernetes::init(_module, dir)
+
+
+### p6kubernetes/lib:
+
+#### p6kubernetes/lib/deployment.sh:
+
+- p6_kubernetes_deployment_of_image(image)
+
+#### p6kubernetes/lib/pod.sh:
+
+- p6_kubernetes_pod_delete(pod_name)
+- str name = p6_kubernetes_pod_find(glob)
+
+#### p6kubernetes/lib/prompt.sh:
+
+- p6_kubernetes_prompt_info()
 
 
 
+## Hier
+```text
+.
+├── debug.sh
+├── deployment.sh
+├── pod.sh
+└── prompt.sh
+
+1 directory, 4 files
+```
 ## Author
 
 Philip M . Gollucci <pgollucci@p6m7g8.com>
