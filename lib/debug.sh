@@ -12,7 +12,7 @@ p6_kubernetes_debug_cmd() {
   local source="$1"
   shift 1
 
-  local now=$(p6_dt_now)
+  local now=$(p6_date_point_now_epoch_seconds)
   local name="${USER}-${env}-debug-${now}"
 
   local code="kubectl debug $source -it -c app --copy-to=$name -- $@"
