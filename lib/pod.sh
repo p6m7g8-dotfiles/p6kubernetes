@@ -37,3 +37,25 @@ p6_kubernetes_pod_delete() {
 
   p6_return_void
 }
+
+######################################################################
+#<
+#
+# Function: stream  = p6_kubernetes_pod_describe(pod_name_glob)
+#
+#  Args:
+#	pod_name_glob -
+#
+#  Returns:
+#	stream - 
+#
+#>
+######################################################################
+p6_kubernetes_pod_describe() {
+  local pod_name_glob="$1"
+
+  p6_run_code kubectl describe pod
+
+  p6_return_stream
+}
+
