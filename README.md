@@ -55,13 +55,13 @@
 
 ```text
 .
-├── README.md
 ├── init.zsh
 ├── lib
 │   ├── debug.sh
 │   ├── deployment.sh
 │   ├── pod.sh
 │   └── prompt.sh
+├── README.md
 └── share
     └── deployment.yaml
 
