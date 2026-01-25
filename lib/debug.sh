@@ -3,7 +3,11 @@
 ######################################################################
 #<
 #
-# Function: p6_kubernetes_debug_cmd()
+# Function: p6_kubernetes_debug_cmd(source, ...)
+#
+#  Args:
+#	source -
+#	... - 
 #
 #  Environment:	 USER
 #>

@@ -15,7 +15,7 @@
 p6_kubernetes_pod_find() {
   local glob="$1"
 
-  local name=$(kubectl get pods | grep "$glob" | awk '{print $1}' | head -1)
+  local name=$(kubectl get pods | p6_filter_row_select "$glob" | p6_filter_column_pluck 1 | p6_filter_row_first 1)
 
   p6_return_str "$name"
 }
@@ -58,4 +58,3 @@ p6_kubernetes_pod_describe() {
 
   p6_return_stream
 }
-
