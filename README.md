@@ -48,7 +48,7 @@ TODO: Add a short summary of this module.
 
 ##### p6kubernetes/lib/debug.sh
 
-- `p6_kubernetes_debug_cmd()`
+- `p6_kubernetes_debug_cmd(source, ...)`
 
 ##### p6kubernetes/lib/deployment.sh
 
