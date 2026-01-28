@@ -15,13 +15,13 @@ p6_kubernetes_prompt_info() {
 
   local str
 
-  if ! p6_string_blank "$KUBECONFIG"; then
+  if p6_string_blank_NOT "$KUBECONFIG"; then
     str="kube:\t\t  "
   fi
-  if ! p6_string_blank "$P6_KUBE_CFG"; then
+  if p6_string_blank_NOT "$P6_KUBE_CFG"; then
     str="${str}ctx:$P6_KUBE_CFG"
   fi
-  if ! p6_string_blank "$P6_KUBE_NS"; then
+  if p6_string_blank_NOT "$P6_KUBE_NS"; then
     str="${str} ns:$P6_KUBE_NS"
   fi
 
