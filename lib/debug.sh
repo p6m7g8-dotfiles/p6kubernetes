@@ -17,9 +17,10 @@ p6_kubernetes_debug_cmd() {
   shift 1
 
   local now=$(p6_date_point_now_epoch_seconds)
+  # shellcheck disable=SC2154
   local name="${USER}-${env}-debug-${now}"
 
-  local code="kubectl debug $source -it -c app --copy-to=$name -- $@"
+  local code="kubectl debug $source -it -c app --copy-to=$name -- $*"
   p6_run_code "$code"
 
   p6_kubernetes_pod_delete "$name"
