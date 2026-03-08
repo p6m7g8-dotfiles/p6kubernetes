@@ -44,8 +44,8 @@ TODO: Add a short summary of this module.
 - `p6df::modules::p6kubernetes::deps()`
 - `p6df::modules::p6kubernetes::init(_module, dir)`
   - Args:
-    - _module - 
-    - dir - 
+    - _module -
+    - dir -
 
 #### p6kubernetes/lib
 
@@ -53,26 +53,26 @@ TODO: Add a short summary of this module.
 
 - `p6_kubernetes_debug_cmd(source, ...)`
   - Args:
-    - source - 
-    - ... - 
+    - source -
+    - ... -
 
 ##### p6kubernetes/lib/deployment.sh
 
 - `p6_kubernetes_deployment_of_image(image)`
   - Args:
-    - image - 
+    - image -
 
 ##### p6kubernetes/lib/pod.sh
 
 - `p6_kubernetes_pod_delete(pod_name)`
   - Args:
-    - pod_name - 
+    - pod_name -
 - `str name = p6_kubernetes_pod_find(glob)`
   - Args:
-    - glob - 
+    - glob -
 - `stream  = p6_kubernetes_pod_describe(pod_name_glob)`
   - Args:
-    - pod_name_glob - 
+    - pod_name_glob -
 
 ##### p6kubernetes/lib/prompt.sh
 
